@@ -1,4 +1,4 @@
-name: "Ludvig by Reothor"
+name: "Ludvig security scanner"
 description: "Scan for secrets and vulnerabilities"
 author: Frode Hus
 branding:

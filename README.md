@@ -1,12 +1,12 @@
-# Ludvig
+# Ludvig GitHub Action
+
+See [Ludvig](https://github.com/frodehus/ludvig) for CLI usage and installation.
 
 [![GitHub Release][release-img]][release]
 [![GitHub Marketplace][marketplace-img]][marketplace]
 [![License][license-img]][license]
 
 Security scanner
-
-See [source](https://github.com/frodehus/ludvig) for CLI usage and installation.
 
 ## Usage
 
