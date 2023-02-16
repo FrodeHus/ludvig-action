@@ -36,4 +36,4 @@ if [ $sarif_file ]; then
     ARGS="$ARGS $sarifFileArg"
 fi
 
-python3 -m ludvig fs scan --path ${path} ${ARGS} -otable
+ludvig fs scan --path ${path} ${ARGS} -otable
