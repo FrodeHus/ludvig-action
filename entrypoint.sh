@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-while getopts "hc:p:l:s:" o; do
+while getopts "hc:p:l:s:r:" o; do
     case "${o}" in
         h)
             echo "-c <custom rules path (optional)> -p <path to scan> -l <level (optional)> -s <sarif file name (optional)>"
@@ -18,9 +18,18 @@ while getopts "hc:p:l:s:" o; do
         s)
             export sarif_file=${OPTARG}
         ;;
+        r)
+            export release=${OPTARG}
+        ;;
     esac
 done
 ARGS=""
+
+if [ $release ]; then
+    ludvig pack --output-file $release
+    return
+fi
+
 if [ $customRules ]; then
     customRulesArg="--custom-rules $customRules"
     ARGS="$ARGS $customRulesArg"

@@ -7,7 +7,7 @@ branding:
 inputs:
   path:
     description: "Path to scan"
-    required: true
+    required: false
     default: "."
   customRulesPath:
     description: "Path to custom YARA rules"
@@ -18,6 +18,9 @@ inputs:
     required: false
   sarifFileName:
     description: "SARIF file name (enables SARIF generation)"
+    required: false
+  createRelease:
+    description: "Downloads all source assets and builds a distributable .tar.gz package containing rules and vulnerability database"
     required: false
 outputs:
   result:
@@ -30,3 +33,4 @@ runs:
     - "-p ${{ inputs.path }}"
     - "-l ${{ inputs.level }}"
     - "-s ${{ inputs.sarifFileName }}"
+    - "-r ${{ inputs.createRelease }}"
